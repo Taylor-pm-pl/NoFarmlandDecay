@@ -1,0 +1,9 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/Eric-pm-pl/NoFarmlandDecay
+build-by-default: true
+branches:
+- stable
+projects:
+  NoFarmlandDecay:
+    path: ""
+    icon: icon.png
+...
