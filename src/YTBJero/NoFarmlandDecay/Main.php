@@ -12,9 +12,20 @@ class Main extends Plugin implements Event{
 
 	public function onEnable(): void{
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
+		$this->saveDefaultConfig();
 	}
 
 	public function onPlayerTrample(EntityTrampleFarmlandEvent $event){
-		$event->cancel();
+		$entity = $event->getEntity();
+		if(empty($this->getConfig()->get("worlds", []))){
+			$event->cancel();
+		} else{
+			foreach ($this->getConfig()->getAll() as $key) {
+				$from = $entity->getWorld()->getFolderName();
+				if($key == $from){
+					$event->cancel();
+				}
+			}
+		}
 	}
 }

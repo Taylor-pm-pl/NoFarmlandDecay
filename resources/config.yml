@@ -1,0 +1,5 @@
+# The worlds NoFarmLandDecay
+# Set to [] to allow all worlds
+worlds: []
+  # - world 
+  # - lobby
