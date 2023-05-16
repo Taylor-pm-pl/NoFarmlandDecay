@@ -1,5 +1,5 @@
 name: NoFarmlandDecay
-version: 0.0.2
+version: 0.0.3
 api: 4.0.0
 author: TaylorR
 main: TaylorR\NoFarmlandDecay\Main
