@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TaylorR\NoFarmlandDecay;
+namespace YTBJero\NoFarmlandDecay;
 
 use pocketmine\plugin\PluginBase as Plugin;
 use pocketmine\event\Listener as Event;
