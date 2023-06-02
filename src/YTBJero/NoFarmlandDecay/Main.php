@@ -17,7 +17,7 @@ class Main extends Plugin implements Event
     public function onEnable(): void
     {
         $this->saveDefaultConfig();
-        $onEntityTrample = $this->onEntityTrample(...);
+        $onEntityTrample = \Closure::fromCallable([$this, "onEntityTrample"]);
         $this->getServer()->getPluginManager()->registerEvent(EntityTrampleFarmlandEvent::class, $onEntityTrample, EventPriority::HIGHEST, $this);
     }
 
